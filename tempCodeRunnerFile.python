@@ -1,0 +1,27 @@
+# Calculator_Python
+
+print("Assignment_1 IOT Calculator")
+
+# function Sum 
+def calculate_sum():
+    # Initialize a variable to store the sum
+    total = 0
+
+    # Ask the user for input and calculate the sum
+    while True:
+        user_input = input("Enter a number (or 'q' to quit): ")
+        
+        if user_input.lower() == 'q':
+            break
+
+        try:
+            num = float(user_input)  # Convert the input to a float
+            total += num
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+    return total
+
+# Call the function to calculate the sum
+result = calculate_sum()
+print("Sum:", result)
