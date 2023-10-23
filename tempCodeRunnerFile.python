@@ -25,3 +25,4 @@ def calculate_sum():
 # Call the function to calculate the sum
 result = calculate_sum()
 print("Sum:", result)
+print("hello")
