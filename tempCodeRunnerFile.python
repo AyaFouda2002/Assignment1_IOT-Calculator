@@ -22,6 +22,26 @@ def calculate_sum():
 
     return total
 
+
 # Call the function to calculate the sum
 result = calculate_sum()
 print("Sum:", result)
+
+def count_vowels(input_string):
+    # Define a set of vowels to check against
+    vowels = set("aeiouAEIOU")
+
+    # Initialize a counter to keep track of the number of vowels
+    count = 0
+
+    # Iterate through the characters in the input string
+    for char in input_string:
+        if char in vowels:
+            count += 1
+
+    return count
+
+
+input_string = input("Enter a string: ")
+result = count_vowels(input_string)
+print(f"Number of vowels in the string: {result}")
