@@ -26,6 +26,27 @@ def calculate_sum():
 result = calculate_sum()
 print("Sum:", result)
 
+def generate_fibonacci(N):
+    # Initialize variables to store the first two Fibonacci numbers
+    fib_sequence = []
+    a, b = 0, 1
+
+    # Check for valid input
+    if N <= 0:
+        print("Please provide a positive integer N.")
+        return
+
+    # Generate and store the Fibonacci numbers
+    for _ in range(N):
+        fib_sequence.append(a)
+        a, b = b, a + b
+
+    # Print the first N Fibonacci numbers separated by spaces
+    print(" ".join(map(str, fib_sequence)))
+
+# Example usage:
+N = int(input("Enter the number of Fibonacci numbers to generate: "))
+generate_fibonacci(N)
 
 def check_prime(num):
     if num <= 1:
