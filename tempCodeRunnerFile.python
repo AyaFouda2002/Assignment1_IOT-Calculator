@@ -25,3 +25,21 @@ def calculate_sum():
 # Call the function to calculate the sum
 result = calculate_sum()
 print("Sum:", result)
+
+
+def prime_factors(n):
+    factors = []
+    divisor = 2
+
+    while n > 1:
+        while n % divisor == 0:
+            factors.append(divisor)
+            n //= divisor
+        divisor += 1
+
+    return factors
+
+
+number = int(input("Enter a positive integer: "))
+result = prime_factors(number)
+print(f"Prime factors of {number}: {result}")
