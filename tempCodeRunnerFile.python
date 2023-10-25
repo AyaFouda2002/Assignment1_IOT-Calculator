@@ -26,6 +26,24 @@ def calculate_sum():
 result = calculate_sum()
 print("Sum:", result)
 
+
+def prime_factors(n):
+    factors = []
+    divisor = 2
+
+    while n > 1:
+        while n % divisor == 0:
+            factors.append(divisor)
+            n //= divisor
+        divisor += 1
+
+    return factors
+
+
+number = int(input("Enter a positive integer: "))
+result = prime_factors(number)
+print(f"Prime factors of {number}: {result}")
+
 def generate_fibonacci(N):
     # Initialize variables to store the first two Fibonacci numbers
     fib_sequence = []
@@ -114,4 +132,3 @@ def fahrenheit_to_celsius(fahrenheit):
     print(celsius)
     return celsius
 fahrenheit_to_celsius(2)
- 
