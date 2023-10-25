@@ -45,7 +45,6 @@ def count_vowels(input_string):
 input_string = input("Enter a string: ")
 result = count_vowels(input_string)
 print(f"Number of vowels in the string: {result}")
-=======
 
 def prime_factors(n):
     factors = []
