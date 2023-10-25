@@ -27,6 +27,21 @@ result = calculate_sum()
 print("Sum:", result)
 
 
+def check_prime(num):
+    if num <= 1:
+        print(f"{num} is not a prime number.")
+        return
+
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            print(f"{num} is not a prime number.")
+            return
+
+    print(f"{num} is a prime number.")
+
+number = int(input("Enter an integer to check for primality: "))
+check_prime(number)
+
 def count_words(sentence):
     # Split the sentence into words using space as the delimiter
     words = sentence.split()
@@ -70,3 +85,4 @@ if average_result is not None:
     print("Average:", average_result)
 else:
     print("No numbers entered, cannot calculate average.")
+
