@@ -26,6 +26,57 @@ def calculate_sum():
 result = calculate_sum()
 print("Sum:", result)
 
+def generate_fibonacci(N):
+    # Initialize variables to store the first two Fibonacci numbers
+    fib_sequence = []
+    a, b = 0, 1
+
+    # Check for valid input
+    if N <= 0:
+        print("Please provide a positive integer N.")
+        return
+
+    # Generate and store the Fibonacci numbers
+    for _ in range(N):
+        fib_sequence.append(a)
+        a, b = b, a + b
+
+    # Print the first N Fibonacci numbers separated by spaces
+    print(" ".join(map(str, fib_sequence)))
+
+# Example usage:
+N = int(input("Enter the number of Fibonacci numbers to generate: "))
+generate_fibonacci(N)
+
+def check_prime(num):
+    if num <= 1:
+        print(f"{num} is not a prime number.")
+        return
+
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            print(f"{num} is not a prime number.")
+            return
+
+    print(f"{num} is a prime number.")
+
+number = int(input("Enter an integer to check for primality: "))
+check_prime(number)
+
+def count_words(sentence):
+    # Split the sentence into words using space as the delimiter
+    words = sentence.split()
+    # Count the number of words
+    word_count = len(words)
+    return word_count
+
+# Get input from the user
+input_sentence = input("Enter a sentence: ")
+
+# Call the function and print the result
+result = count_words(input_sentence)
+print(f"Word count: {result}")
+
 
 def calculate_average(*numbers):
     # Check if the input list is empty
